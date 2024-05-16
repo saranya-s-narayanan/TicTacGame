@@ -16,25 +16,18 @@
         android:text="@string/gameTitleOffline"
         android:textSize="28sp"
         android:textStyle="bold"
+        android:layout_margin="20dp"
         android:textColor="?attr/colorPrimary"
         android:gravity="center_horizontal"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="X turn"
-        android:textSize="18sp"
-        android:textColor="?attr/colorTertiary"
-        android:textStyle="bold"
-        android:layout_margin="20dp"
-        android:gravity="center_horizontal"
-        />
+
 
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_margin="20dp"
         android:columnCount="3">
         <Button
             android:id="@+id/btn0"
@@ -44,9 +37,9 @@
             android:layout_margin="10dp"
             android:background="?attr/colorSecondaryContainer"
             android:textSize="18sp"
-            android:textColor="?attr/colorOnSecondaryContainer"
             android:textStyle="bold"
-            android:text="X" />
+            android:tag="0"
+            android:text="" />
 
         <Button
             android:id="@+id/btn1"
@@ -56,9 +49,9 @@
             android:layout_margin="10dp"
             android:background="?attr/colorSecondaryContainer"
             android:textSize="18sp"
-            android:textColor="?attr/colorOnSecondaryContainer"
             android:textStyle="bold"
-            android:text="X" />
+            android:tag="1"
+            android:text="" />
 
         <Button
             android:id="@+id/btn2"
@@ -68,9 +61,9 @@
             android:layout_margin="10dp"
             android:background="?attr/colorSecondaryContainer"
             android:textSize="18sp"
-            android:textColor="?attr/colorOnSecondaryContainer"
             android:textStyle="bold"
-            android:text="X" />
+            android:tag="2"
+            android:text="" />
 
         <Button
             android:id="@+id/btn3"
@@ -80,9 +73,9 @@
             android:layout_margin="10dp"
             android:background="?attr/colorSecondaryContainer"
             android:textSize="18sp"
-            android:textColor="?attr/colorOnSecondaryContainer"
             android:textStyle="bold"
-            android:text="X" />
+            android:tag="3"
+            android:text="" />
 
         <Button
             android:id="@+id/btn4"
@@ -92,9 +85,9 @@
             android:layout_margin="10dp"
             android:background="?attr/colorSecondaryContainer"
             android:textSize="18sp"
-            android:textColor="?attr/colorOnSecondaryContainer"
             android:textStyle="bold"
-            android:text="X" />
+            android:tag="4"
+            android:text="" />
         <Button
             android:id="@+id/btn5"
             android:layout_width="60dp"
@@ -103,9 +96,9 @@
             android:layout_margin="10dp"
             android:background="?attr/colorSecondaryContainer"
             android:textSize="18sp"
-            android:textColor="?attr/colorOnSecondaryContainer"
             android:textStyle="bold"
-            android:text="X" />
+            android:tag="5"
+            android:text="" />
         <Button
             android:id="@+id/btn6"
             android:layout_width="60dp"
@@ -114,9 +107,9 @@
             android:layout_margin="10dp"
             android:background="?attr/colorSecondaryContainer"
             android:textSize="18sp"
-            android:textColor="?attr/colorOnSecondaryContainer"
             android:textStyle="bold"
-            android:text="X" />
+            android:tag="6"
+            android:text="" />
         <Button
             android:id="@+id/btn7"
             android:layout_width="60dp"
@@ -125,9 +118,9 @@
             android:layout_margin="10dp"
             android:background="?attr/colorSecondaryContainer"
             android:textSize="18sp"
-            android:textColor="?attr/colorOnSecondaryContainer"
             android:textStyle="bold"
-            android:text="X" />
+            android:tag="7"
+            android:text="" />
         <Button
             android:id="@+id/btn8"
             android:layout_width="60dp"
@@ -136,23 +129,31 @@
             android:layout_margin="10dp"
             android:background="?attr/colorSecondaryContainer"
             android:textSize="18sp"
-            android:textColor="?attr/colorOnSecondaryContainer"
             android:textStyle="bold"
-            android:text="X" />
+            android:tag="8"
+            android:text="" />
 
     </GridLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Game over!"
-        android:textSize="18sp"
+        android:text=""
+        android:textSize="22sp"
         android:textColor="?attr/colorTertiary"
         android:textStyle="bold"
         android:layout_margin="20dp"
+        android:id="@+id/gameStatus"
         android:gravity="center_horizontal"
         />
 
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/startGame"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="@string/startGame"/>
 
 
 </LinearLayout>
