@@ -4,6 +4,7 @@
     <string name="gameTitle">Tic Tac Toe Game</string>
     <string name="playOffline">Play Offline</string>
     <string name="playOnline">Play Online</string>
-    <string name="gameTitleOffline">Tic Tac Toe Offline</string>
     <string name="startGame">Start Game</string>
+    <string name="gameIDHint">Enter Game ID</string>
+    <string name="joinOnline">Join Online</string>
 </resources>

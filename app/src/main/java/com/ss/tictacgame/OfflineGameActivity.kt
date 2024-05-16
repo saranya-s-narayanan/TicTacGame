@@ -19,6 +19,8 @@ class OfflineGameActivity : AppCompatActivity(),View.OnClickListener {
         binding = ActivityOfflineGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        GameData.fetchGameModel();
+
         binding.btn0.setOnClickListener(this);
         binding.btn1.setOnClickListener(this);
         binding.btn2.setOnClickListener(this);
@@ -55,6 +57,14 @@ class OfflineGameActivity : AppCompatActivity(),View.OnClickListener {
 
             binding.startGame.visibility = View.VISIBLE
 
+
+            binding.gameMode.text =
+                when(gameId){
+                    "-1" -> "(Offline)"
+                    else -> "(Online)"
+                }
+
+
             binding.gameStatus.text =
                 when(gameStatus){
                     GameStatus.CREATED -> {
@@ -66,10 +76,20 @@ class OfflineGameActivity : AppCompatActivity(),View.OnClickListener {
                     }
                     GameStatus.INPROGRESS ->{
                         binding.startGame.visibility = View.INVISIBLE
-                        currentPlayer + " turn"
+                        when(GameData.myID){
+                            currentPlayer -> "Your turn"
+                            else ->  currentPlayer + " turn"
+                        }
+
                     }
                     GameStatus.FINISHED ->{
-                        if(winner.isNotEmpty()) winner + " Won"
+                        if(winner.isNotEmpty()) {
+                            when(GameData.myID){
+                                winner -> "You won"
+                                else ->   winner + " Won"
+                            }
+
+                        }
                         else "DRAW"
                     }
                 }
@@ -78,9 +98,10 @@ class OfflineGameActivity : AppCompatActivity(),View.OnClickListener {
     }
 
     private fun startGame() {
-        gameModell.apply {
+        gameModell?.apply {
             updateGameData(
                 Game(
+                    gameId = gameId,
                     gameStatus = GameStatus.INPROGRESS
                 )
             )
@@ -135,8 +156,12 @@ class OfflineGameActivity : AppCompatActivity(),View.OnClickListener {
                 Toast.makeText(applicationContext,"Game not started yet!",Toast.LENGTH_SHORT).show()
                 return
             }
-            Log.d("TicTac","4444");
             //game is in progress
+            if(gameId!="-1" && currentPlayer!=GameData.myID ){
+                Toast.makeText(applicationContext,"Not your turn",Toast.LENGTH_SHORT).show()
+                return
+            }
+
             val clickedPos =(v?.tag  as String).toInt()
             if(filledPos[clickedPos].isEmpty()){
                 filledPos[clickedPos] = currentPlayer
