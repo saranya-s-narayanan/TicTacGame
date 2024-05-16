@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tic Tac Game</string>
+    <string name="gameTitle">Tic Tac Toe Game</string>
+    <string name="playOffline">Play Offline</string>
+    <string name="playOnline">Play Online</string>
+    <string name="gameTitleOffline">Tic Tac Toe Offline</string>
+</resources>

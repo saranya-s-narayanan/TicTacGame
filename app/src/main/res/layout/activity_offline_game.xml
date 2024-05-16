@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_margin="50dp"
+    android:orientation="vertical"
+    tools:context=".OfflineGameActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gameTitleOffline"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:gravity="center_horizontal"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X turn"
+        android:textSize="18sp"
+        android:textColor="?attr/colorTertiary"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="3">
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="?attr/colorSecondaryContainer"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:textStyle="bold"
+            android:text="X" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="?attr/colorSecondaryContainer"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:textStyle="bold"
+            android:text="X" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="?attr/colorSecondaryContainer"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:textStyle="bold"
+            android:text="X" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="?attr/colorSecondaryContainer"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:textStyle="bold"
+            android:text="X" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="?attr/colorSecondaryContainer"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:textStyle="bold"
+            android:text="X" />
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="?attr/colorSecondaryContainer"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:textStyle="bold"
+            android:text="X" />
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="?attr/colorSecondaryContainer"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:textStyle="bold"
+            android:text="X" />
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="?attr/colorSecondaryContainer"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:textStyle="bold"
+            android:text="X" />
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="?attr/colorSecondaryContainer"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:textStyle="bold"
+            android:text="X" />
+
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game over!"
+        android:textSize="18sp"
+        android:textColor="?attr/colorTertiary"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        />
+
+
+
+</LinearLayout>
